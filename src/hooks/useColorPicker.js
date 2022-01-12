@@ -7,9 +7,9 @@ export default function useColorPicker(initialState) {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setColorState((prevState) => {
+    setState((prevState) => {
       return { ...prevState, [name]: value };
     });
   };
-  return [formState, handleChange]
+  return [state, handleChange]
 }
