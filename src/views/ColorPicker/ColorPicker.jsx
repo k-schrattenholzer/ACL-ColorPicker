@@ -4,7 +4,7 @@ import useColorPicker from '../../hooks/useColorPicker.js';
 import styles from './ColorPicker.css';
 
 export default function ColorPicker() {
-  // for the more reusable hook
+
   const [data, handleChange] = useColorPicker({
     fgColor: '#ffcc00',
     bgColor: '#212121',
@@ -13,9 +13,6 @@ export default function ColorPicker() {
   })
   
   const affirmation = useAffirmation(data.bgColor, data.fgColor);
-
-  // const [didChangeColor, content, bgColor, fgColor, handleChange] = useColorPicker();
-
 
   return (
     <>
