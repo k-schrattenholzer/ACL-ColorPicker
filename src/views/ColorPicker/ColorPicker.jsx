@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import Display from '../../components/Display/Display';
 import useAffirmation from '../../hooks/useAffirmation.js';
 import useColorPicker from '../../hooks/useColorPicker.js';
@@ -12,10 +11,11 @@ export default function ColorPicker() {
   //   didChangeColor: false,
   //   content: 'Hello, world!'
   // })
-
-  const [didChangeColor, bgColor, fgColor, content, handleChange] = useColorPicker();
-
+  
   const affirmation = useAffirmation(bgColor, fgColor);
+
+  const [didChangeColor, content, bgColor, fgColor, handleChange] = useColorPicker();
+
 
   return (
     <>

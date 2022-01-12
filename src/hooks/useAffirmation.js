@@ -1,4 +1,6 @@
-export default function useAffirmation() {
+import { useEffect, useState } from 'react';
+
+export default function useAffirmation(bgColor, fgColor) {
   // TODO: Implement me!
   const [affirmation, setAffirmation] = useState('');
 
@@ -14,4 +16,5 @@ export default function useAffirmation() {
     const randomIndex = Math.floor(Math.random() * affirmations.length);
     setAffirmation(affirmations[randomIndex]);
   }, [bgColor, fgColor]);
+  return affirmation;
 }
